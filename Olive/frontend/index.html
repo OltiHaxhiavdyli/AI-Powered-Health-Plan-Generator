@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olive Digidiet - Your Personalized Wellness Hub</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif; /* Consistent font */
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(45deg, #a7e9b3, #f4fdd9); /* Soft, inviting gradient */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #588157; /* Consistent text color */
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.1); /* Slightly transparent white navbar */
+            color: #386641;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar .logo-space {
+            margin-right: 15px; /* Space for logo */
+        }
+
+        .navbar .title {
+            font-size: 1.8em; /* Adjusted font size to match other pages */
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .nav-links a {
+            color: #588157;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #386641;
+            text-decoration: underline wavy #a7e9b3;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            margin: 50px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #386641; /* Olive green heading */
+            font-size: 2.5em; /* Matching heading size */
+        }
+
+        input[type="number"],
+        select,
+        input[type="text"],
+        .activity-level,
+        input[type="email"],
+        input[type="file"],
+        button {
+            width: calc(100% - 20px);
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #a7e9b3; /* Olive green border */
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif; /* Consistent font for form elements */
+            font-size: 1em;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #386641; /* Focus border color */
+        }
+
+        .activity-level {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .activity-level p {
+            color: #588157;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .activity-level label {
+            display: inline-block;
+            width: auto;
+            margin-right: 15px;
+            color: #777;
+        }
+
+        .activity-level input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            background: #588157; /* Olive green button */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background: #386641; /* Darker olive green on hover */
+        }
+
+     
+
+        footer {
+            background: rgba(167, 233, 179, 0.2); /* Light olive green footer */
+            color: #588157;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px; /* Add some space above the footer */
+            font-size: 0.9em;
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #386641; /* Olive green loading text */
+        }
+
+        /* Fun, floating shapes */
+        .bg-shape {
+            position: absolute;
+            background: rgba(167, 233, 179, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite alternate;
+        }
+
+        .bg-shape-1 {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 85%;
+            animation-delay: 0.7s;
+        }
+
+        .bg-shape-2 {
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            left: 5%;
+            animation-delay: 1.8s;
+        }
+
+        .bg-shape-3 {
+            width: 60px;
+            height: 60px;
+            top: 65%;
+            right: 15%;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-20px);
+                opacity: 0.5;
+            }
+        }
+
+        .plan-card {
+  background-color: #e8fff2;
+  border-radius: 12px;
+  padding: 24px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #2c3e50;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 40px auto;
+  white-space: pre-line;
+}
+
+.plan-card h2 {
+  color: #27ae60;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card ul {
+  padding-left: 1.2rem;
+}
+
+.plan-card li {
+  margin-bottom: 0.5rem;
+}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <img src="../frontend/static/images/ChatGPT_Image_Apr_5__2025__12_03_10_PM-removebg-preview.png" height="125px" alt="Olive Digidiet Logo">
+        <div class="title">Olive Digidiet</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="SignUp.html">Sign Up</a>
+            <a href="LogIn.html">Log In</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Your Personalized Health Profile</h2>
+        <form id="patientForm">
+            <input type="number" name="age" placeholder="Age" required />
+            <select name="gender" required>
+                <option value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input type="text" name="allergies" placeholder="Allergies (comma-separated)" />
+            <div class="activity-level">
+                <p>Physical Activity Level </p>
+                <label><input type="radio" name="activity" value="1"> 1</label>
+                <label><input type="radio" name="activity" value="2"> 2</label>
+                <label><input type="radio" name="activity" value="3"> 3</label>
+                <label><input type="radio" name="activity" value="4"> 4</label>
+                <label><input type="radio" name="activity" value="5"> 5</label>
+            </div>
+            <input type="email" name="email" placeholder="Email" required />
+            <label for="report">Upload Medical Report:</label>
+            <input type="file" id="report" name="report" accept="image/*" required />
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="loading-screen" id="loading">Loading...</div>
+
+    
+    <div id="health-plan" class="plan-card">
+        <!-- This content will be filled dynamically by JavaScript -->
+      </div>
+      
+
+    <footer>
+        &copy; 2025 Olive Digidiet. All Rights Reserved.
+    </footer>
+
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+
+    <script>
+        document.getElementById("patientForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            const formData = new FormData(this);
+            const loadingScreen = document.getElementById("loading");
+            const healthPlan = document.getElementById("health-plan");
+        
+            loadingScreen.style.display = "flex"; // Show loading
+        
+            fetch("http://localhost:5000/process", {
+                method: "POST",
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                loadingScreen.style.display = "none"; // Hide loading
+        
+                if (data.error) {
+                    healthPlan.innerHTML = `<p style="color:red;">Error: ${data.error}</p>`;
+                    return;
+                }
+        
+                // Format the AI response for better readability
+                let formattedPlan = data.plan
+                    .replace(/(Your Personalized Health Plan:)/gi, '<h2>$1</h2>')
+                    .replace(/(\d+\.\s[A-Za-z\s]+:)/g, '<h3>$1</h3>') // Convert numbered sections to headings
+                    .replace(/- /g, '• ') // Replace dash bullets with real bullets
+                    .replace(/\n/g, '<br>'); // Line breaks
+        
+                healthPlan.innerHTML = formattedPlan;
+                healthPlan.style.display = "block";
+            })
+            .catch((error) => {
+                loadingScreen.style.display = "none";
+                console.error("Error during fetch:", error);
+                healthPlan.innerHTML = `<p style="color:red;">An error occurred while processing your request.</p>`;
+            });
+        });
+        </script>
+        
+        
+</body>
+</html>

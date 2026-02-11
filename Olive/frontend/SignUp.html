@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olive Digidiet - Create Your Account</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Nunito', sans-serif;
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(45deg, #a7e9b3, #f4fdd9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 100%;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar .logo-space {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo-space img {
+            height: 80px;
+        }
+
+        .navbar .title {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #386641;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+        }
+
+        .navbar .nav-links a {
+            color: #588157;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #386641;
+            text-decoration: underline wavy #a7e9b3;
+        }
+
+        /* Sign up form container styles */
+        .signup-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            z-index: 2;
+            width: 400px;
+            margin-top: 60px;
+            box-sizing: border-box;
+            margin-bottom: 20px; /* Add margin at the bottom */
+        }
+
+        .signup-container h2 {
+            color: #386641;
+            margin-bottom: 30px;
+            margin-top: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            color: #588157;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="email"],
+        .input-group input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 2px solid #a7e9b3;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #386641;
+        }
+
+        .signup-button {
+            background: #588157;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .signup-button:hover {
+            background: #386641;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .login-link {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #777;
+        }
+
+        .login-link a {
+            color: #588157;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+        }
+
+        .login-link a:hover {
+            color: #386641;
+            text-decoration: underline dotted #a7e9b3;
+        }
+
+        /* Fun, floating shapes */
+        .bg-shape {
+            position: absolute;
+            background: rgba(167, 233, 179, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite alternate;
+        }
+
+        .bg-shape-1 {
+            width: 80px;
+            height: 80px;
+            top: 15%;
+            left: 10%;
+        }
+
+        .bg-shape-2 {
+            width: 120px;
+            height: 120px;
+            bottom: 20%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+
+        .bg-shape-3 {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .bg-shape-4 {
+            width: 100px;
+            height: 100px;
+            bottom: 5%;
+            left: 45%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-20px);
+                opacity: 0.5;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-space">
+            <img src="ChatGPT_Image_Apr_5__2025__12_03_10_PM-removebg-preview.png" height="80px" alt="Olive Digidiet Logo">
+            <div class="title">Olive Digidiet</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="SignUp.html">Sign Up</a>
+            <a href="LogIn.html">Log In</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <form id="signUpForm">
+            <div class="input-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
+            </div>
+            <div class="input-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
+            </div>
+            <div class="input-group">
+                <label for="email">Your Digital Key (Email):</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+            </div>
+            <div class="input-group">
+                <label for="password">Your Secret Code (Password):</label>
+                <input type="password" id="password" name="password" placeholder="Choose a strong password" required />
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Your Secret Code:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required />
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="LogIn.html">Log In</a>
+        </div>
+    </div>
+
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+    <div class="bg-shape bg-shape-4"></div>
+
+    <script>
+        document.getElementById("signUpForm").onsubmit = async function(e) {
+            e.preventDefault();
+            const form = document.getElementById("signUpForm");
+            const formData = new FormData(form);
+            const password = form.querySelector('#password').value;
+            const confirmPassword = form.querySelector('#confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            const res = await fetch("http://127.0.0.1:5000/signup", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                console.log("Sign Up Successful:", data);
+                alert("Welcome to Olive Digidiet!");
+                window.location.href = "LogIn.html";
+            } else {
+                console.error("Sign Up Failed:", data);
+                alert("Sign up failed: " + (data.error || "Something went wrong"));
+            }
+        };
+    </script>
+</body>
+</html>

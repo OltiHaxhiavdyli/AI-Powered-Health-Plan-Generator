@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olive Digidiet - About Us</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(45deg, #a7e9b3, #f4fdd9);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #588157; /* Primary text color */
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            color: #386641;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar .title {
+            font-size: 2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .nav-links a {
+            color: #588157;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #386641;
+            text-decoration: underline wavy #a7e9b3;
+        }
+
+        .about-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            color: #386641;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-container p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .mission-vision {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .mission, .vision {
+            flex: 1;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .mission h3, .vision h3 {
+            color: #386641;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .team-section {
+            margin-top: 60px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .team-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h4 {
+            color: #588157;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            background: rgba(167, 233, 179, 0.2);
+            color: #588157;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+
+        /* Fun, floating shapes */
+        .bg-shape {
+            position: absolute;
+            background: rgba(167, 233, 179, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite alternate;
+        }
+
+        .bg-shape-1 {
+            width: 90px;
+            height: 90px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .bg-shape-2 {
+            width: 130px;
+            height: 130px;
+            top: 20%;
+            right: 5%;
+            animation-delay: 0.5s;
+        }
+
+        .bg-shape-3 {
+            width: 75px;
+            height: 75px;
+            bottom: 15%;
+            left: 40%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-20px);
+                opacity: 0.5;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-space">
+            <img src="ChatGPT_Image_Apr_5__2025__12_03_10_PM-removebg-preview.png" height="125px" alt="Olive Digidiet Logo">
+        </div>
+        <div class="title">Olive Digidiet</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="SignUp.html">Sign Up</a>
+            <a href="LogIn.html">Log In</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <h2>About Olive Digidiet</h2>
+        <p>At Olive Digidiet, we believe that everyone deserves a personalized path to wellness. We understand that your health is unique, and off-the-shelf diet plans often fall short of addressing your specific needs. That's why we've developed a platform that leverages the power of your individual health data to create truly tailored diet and lifestyle recommendations.</p>
+
+        <div class="mission-vision">
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>To empower individuals to achieve their optimal health through personalized, data-driven diet and lifestyle plans that are easy to understand and implement.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To be the leading platform for personalized wellness, transforming the way people approach their health journey by providing accessible and effective solutions based on their unique biological information.</p>
+            </div>
+        </div>
+        <div class="our-values">
+            <h2>Our Core Values</h2>
+            <div class="values-list">
+                <div class="value">
+                    <h3>Personalization</h3>
+                    <p>We believe in the power of tailoring wellness plans to the individual.</p>
+                </div>
+                <div class="value">
+                    <h3>Data-Driven</h3>
+                    <p>Our recommendations are rooted in scientific analysis of your health data.</p>
+                </div>
+                <div class="value">
+                    <h3>Empowerment</h3>
+                    <p>We aim to give you the knowledge and tools to take control of your health.</p>
+                </div>
+                <div class="value">
+                    <h3>Accessibility</h3>
+                    <p>We strive to make personalized wellness accessible to everyone.</p>
+                </div>
+                <div class="value">
+                    <h3>Innovation</h3>
+                    <p>We are constantly exploring new ways to improve our platform and your experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      
+    <div class="footer">
+        &copy; 2025 Olive Digidiet - Your Path to Personalized Wellness
+    </div>
+
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+</body>
+</html>

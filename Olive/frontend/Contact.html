@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olive Digidiet - Contact Us</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(45deg, #a7e9b3, #f4fdd9);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #588157;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            color: #386641;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar .title {
+            font-size: 2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .nav-links a {
+            color: #588157;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #386641;
+            text-decoration: underline wavy #a7e9b3;
+        }
+
+        .contact-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 700px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            color: #386641;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+            text-align: left; /* Align contact details to the left */
+            width: 100%;
+            max-width: 500px; /* Limit width for better readability */
+        }
+
+        .contact-info h3 {
+            color: #386641;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center; /* Center the main heading */
+        }
+
+        .contact-details {
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .contact-details strong {
+            font-weight: 600;
+            color: #43a047;
+        }
+
+        .contact-form-section {
+            text-align: center;
+            width: 100%;
+        }
+
+        .contact-form-section h3 {
+            color: #386641;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact-form label {
+            color: #588157;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #a7e9b3;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #386641;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-button {
+            background: #588157;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .submit-button:hover {
+            background: #386641;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer {
+            background: rgba(167, 233, 179, 0.2);
+            color: #588157;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+
+        /* Fun, floating shapes */
+        .bg-shape {
+            position: absolute;
+            background: rgba(167, 233, 179, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite alternate;
+        }
+
+        .bg-shape-1 {
+            width: 70px;
+            height: 70px;
+            top: 30%;
+            left: 5%;
+            animation-delay: 0.8s;
+        }
+
+        .bg-shape-2 {
+            width: 110px;
+            height: 110px;
+            bottom: 25%;
+            right: 10%;
+            animation-delay: 1.2s;
+        }
+
+        .bg-shape-3 {
+            width: 55px;
+            height: 55px;
+            top: 75%;
+            left: 60%;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-20px);
+                opacity: 0.5;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-space">
+            <img src="ChatGPT_Image_Apr_5__2025__12_03_10_PM-removebg-preview.png" height="125px" alt="Olive Digidiet Logo">
+        </div>
+        <div class="title">Olive Digidiet</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="SignUp.html">Sign Up</a>
+            <a href="LogIn.html">Log In</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <h2>Get in Touch with Olive Digidiet</h2>
+        <div class="contact-info">
+            <h3>Contact Details</h3>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> 038 - 72 00 55</p>
+                <p><strong>Laboratory:</strong> 049 - 52 00 56 &amp; 049 - 52 00 78</p>
+                <p><strong>Clinic:</strong> 048 - 52 00 01</p>
+                <p><strong>PCR Testing:</strong> 048 - 52 00 03</p>
+                <p><strong>Address:</strong> Rr.Ymer Aliu L.Kalabria, Prishtinë</p>
+                <p><strong>Email:</strong> <a href="mailto:info@olivemedical-ks.com">info@olivemedical-ks.com</a> &amp; <a href="mailto:contact@olivemedical-ks.com">contact@olivemedical-ks.com</a></p>
+                <p><strong>Website:</strong> <a href="http://www.olivemedical-ks.com" target="_blank">www.olivemedical-ks.com</a></p>
+            </div>
+            <h3>Our Availability</h3>
+            <div class="contact-details">
+                <p><strong>Every Day:</strong> 24/7</p>
+            </div>
+            <h3>Clinic Hours</h3>
+            <div class="contact-details">
+                <p><strong>Monday - Saturday:</strong> 07:00 - 20:00</p>
+                <p><strong>Family Medicine:</strong> Available Every Day 24/7</p>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <h3>Send Us a Message</h3>
+            <form class="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Olive Digidiet - Your Path to Personalized Wellness
+    </div>
+
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+</body>
+</html>
